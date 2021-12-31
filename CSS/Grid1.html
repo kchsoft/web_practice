@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="utf-8">
+        <title> Grid_test </title>
+        <style>
+            #grid{
+                border:5px solid pink;
+                display:grid;
+                grid-template-columns: 150px 1fr;
+                /* 2fr 1fr -> divison of screen by N, and use N */
+                
+                /* caniuse , this site inform me whether can i use any command in web programing.*/
+            }
+            div{
+                border:5px solid gray
+            }
+        </style>
+    </head>
+    <body>
+     <div id="grid">
+      <!-- inline level span <span></span>-->
+      <!-- block level div -->
+      <div>NAVIGATION</div>
+      <div>ARTICLE</div>
+     </div>
+       
+
+    </body>
+</html>

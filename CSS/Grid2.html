@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <mate lang=ko/kr">
+    <meta charset="utf-8">
+    <head>
+        <title>BoxModel2</title>
+        <style>
+            body{
+                margin:0;
+            }
+            h1{
+                text-align: center;
+                font-size: 45px;
+                border-bottom: 1px solid black;
+                margin: 0;
+                padding:20px;
+            }
+
+
+            #grid{
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+
+            #grid ol{
+                border-right: 1px solid black;
+                height: 100px;
+                width:75px;
+                margin: 0;
+                padding : 30px;
+            }
+
+            #grid #article{ /*id in id*/
+                padding : 25px;
+            }
+
+        </style>
+    </head>
+    <body>
+            
+        <h1>WEB</h1>
+    <div id="grid">
+
+        
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+
+        
+        <div id="article">
+            <H2>CSS</H2>
+            <p>
+                test    
+            </p>
+        </div>
+        
+    </div>
+
+    </body>
+
+
+
+
+
+</html>
