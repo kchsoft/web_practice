@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>N/D One Button</title>
+</head>
+<body>
+    
+<input id="night_day" type="button" value="Night" onclick="
+var target = document.querySelector('body');
+
+if(document.querySelector('#night_day').value === 'Night')
+{
+    target.style.backgroundColor='gray';
+    target.style.color='white';
+    this.value='Day';
+}
+else if(this.value === 'Day')
+{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    this.value='Night';
+
+}
+">
+    
+
+
+
+</body>
+</html>
