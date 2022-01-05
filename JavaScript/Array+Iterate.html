@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Array / Iterate</title>
+
+</head>
+<body>
+
+    <ol>
+        <li>num1</li>
+        <li>num2</li>
+        <li>num3</li>
+    </ol>
+    
+    <input type="button" value="change" onclick="
+    var color=document.querySelectorAll('li'); // All을 통해서 li의 모든 tag를 가져와 노드 리스트로 만듬, 그리고
+                                            // 반복을 통해 모두 red로 만듦 
+    var i = 0;
+    while(i < color.length)
+    {
+        color[i].style.color = 'red';
+        i = i + 1;
+    }
+    ">
+</body>
+</html>
