@@ -10,10 +10,14 @@ function onGeoOk(position){
     fetch(url)
    .then((reponse) => reponse.json())
    .then((data)=>{
-        const weather = document.querySelector("#weather span:first-child");
-        const city = document.querySelector("#weather span:last-child");
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-        city.innerText = data.name;
+        const city = document.querySelector("#weather span:first-child");
+        const weather = document.querySelector("#weather span:last-child");
+        city.innerText = `위치 : ${data.name}`;
+        weather.innerText = `
+        현재 날씨 : ${data.weather[0].main}
+        기온: ${data.main.temp}도`;
+       
+        
     });
   
 }

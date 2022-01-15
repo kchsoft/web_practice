@@ -2,3 +2,19 @@
 .hidden{
     display: none;
 }
+
+
+#clock{
+    text-align: right;
+}
+
+#quote{
+    font-family: 'Gaegu', cursive;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#weather{
+
+
+}
