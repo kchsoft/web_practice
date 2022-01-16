@@ -1,0 +1,13 @@
+
+
+body .backgound-0.jpg{
+    background-image: url(../IMAGE/0.jpg); /*외부 폴더의 경우 "../" 로 인해 현재의 디렉토리를 벗어난다.*/
+    background-repeat: no-repeat;
+}
+
+
+
+body .backgound-1.jpg{
+    background-image: url(../IMAGE/1.jpg); /*외부 폴더의 경우 "../" 로 인해 현재의 디렉토리를 벗어난다.*/
+    background-repeat: no-repeat;
+}
