@@ -1,6 +1,6 @@
 const max_number = document.querySelector("#max_number");
 const guess = document.querySelector("#guess");
-const Pbutton = document.querySelector("#Play_button");
+const play_form = document.querySelector("#play_form");
 
 const reply = document.querySelector("div span:first-child");
 const result = document.querySelector("div span:last-child");
@@ -13,19 +13,11 @@ function IsPostive(value){
     return false;
 }
 
-function IsNull(value){
-    if(value == ""){
-        alert("Enter the Integer");
-        return true;
-    } 
-    return false;
-}
 
 function PlayButton(event){
     event.preventDefault();
     if(!(IsPostive(max_number.value))) return;
-    if(IsNull(max_number.value)) return;
-    if(IsNull(guess.value)) return;
+
 
 
     const target = Math.floor(Math.random()*(parseInt(max_number.value)+1));
@@ -37,4 +29,4 @@ function PlayButton(event){
 }
 
 
-Pbutton.addEventListener("click",PlayButton);
+play_form.addEventListener("submit",PlayButton);
