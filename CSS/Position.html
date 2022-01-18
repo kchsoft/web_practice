@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #parent, #other, #grand{
+            border:5px solid tomato;
+        }
+        #grand{
+            position: relative; /*부모태그를 기준으로 움직인다.*/
+            /* fixed -> 화면에 아에 고정시켜 스크롤을 내려도 따라다님. */
+            left :50px;
+            top: 0px;
+        }
+        #me{
+            background-color: black;
+            color:white;
+            position: absolute; /*me 위에 grand에서 pos가 있기 때문에(static 제외)grand를 기준으로 me의 위치가 결정 된다.*/
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="grand"> -->
+       grand
+        <div id="parent">
+           parent
+           <div id="me">me</div>
+        </div>
+    </div>
+     
+  </body>
+</html>
