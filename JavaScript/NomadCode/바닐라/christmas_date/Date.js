@@ -1,11 +1,16 @@
 const time = document.querySelector("#time h2");
+const clockTitle=document.querySelector("#answer h2")
 
 const Month = [31,28,31,30,31,30,31,31,30,31,30,31];
 let Now = new Date();
 let Christmas;
+
 checkChristmasYear();
 DateToChristmas();
 setInterval(DateToChristmas,1000);
+
+getTime();
+setInterval(getTime,1000);
 
 
 function checkChristmasYear(){
@@ -62,3 +67,25 @@ function DateToChristmas(){
     time.innerHTML = `${dateToChristmas}d ${Hour}h ${Minute}m ${Second}s`;
 }
 
+
+
+// JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC.
+
+function getTime() {
+    const xmasDay = new Date(`${new Date().getFullYear()}-12-25:00:00:00+0900`);
+    const now = new Date();
+    // This is in milisecondsx
+    const difference = new Date(xmasDay - now);
+    const secondsInMs = Math.floor(difference / 1000);
+    const minutesInMs = Math.floor(secondsInMs / 60);
+    const hoursInMs = Math.floor(minutesInMs / 60);
+    const days = Math.floor(hoursInMs / 24);
+    const seconds = secondsInMs % 60;
+    const minutes = minutesInMs % 60;
+    const hours = hoursInMs % 24;
+    const daysStr = `${days < 10 ? `0${days}` : days}d`;
+    const hoursStr = `${hours < 10 ? `0${hours}` : hours}h`;
+    const minutesStr = `${minutes < 10 ? `0${minutes}` : minutes}m `;
+    const secondsStr = `${seconds < 10 ? `0${seconds}` : seconds}s`;
+    clockTitle.innerHTML = `${daysStr} ${hoursStr} ${minutesStr} ${secondsStr}`;
+  }
