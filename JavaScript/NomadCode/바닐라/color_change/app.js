@@ -28,7 +28,7 @@ const colors = [
       num2 = Math.floor(Math.random() * colors.length);
       if(num1 !== num2) break;
     }
-    document.body.style.backgroundImage = `
+    document.body.style.background = `
   linear-gradient(${colors[num1]},${colors[num2]})
   `;
   }
