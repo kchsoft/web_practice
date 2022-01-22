@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet"> <!-- Web-font -->
+    <link rel="stylesheet" href="CSS/fontello-096d9d8e/css/fontello.css">
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/background-image.css">
@@ -21,7 +22,10 @@
                 <input maxlength="15" type="text" placeholder="what is your name?" required />
                 <input type="submit" value="Log In">
             </form>
-            <h1 id="greeting" class="hidden"></h1>
+            <div id="greeting" class="hidden">
+                <h1 id="greeting_name"></h1>  
+                <button id="reset_name"><i class="icon-undo"></i></button>
+            </div>     
         </div>
         <h2 id="clock"></h2>
         <div id="weather">
@@ -35,7 +39,7 @@
         <form id="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required />
         </form>
-        <ul id="todo-list"></ul>
+        <div id="todo-list"></div>
 
     </main>
     <!--  -->

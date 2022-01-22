@@ -12,13 +12,17 @@ header{
     flex-direction: column;
 }
 
-header form.hidden{
+header .hidden{
     display: none;
 }
 
 header #service{
     align-self: center;
-    flex-basis: 60px;
+    flex-basis: 100px;
+} 
+
+header #service #greeting_name{
+    display: inline-block;
 } 
 
 header #login-form{
@@ -39,3 +43,4 @@ main{
     text-align: center;
     flex-basis: 350px;
 }
+

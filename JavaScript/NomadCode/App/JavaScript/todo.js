@@ -20,8 +20,8 @@ function handleToDoSubmit(event){
 }
 
 function paintToDo(newTodo){
-    const li = document.createElement("li");
-    li.id = newTodo.id;
+    const p = document.createElement("p");
+    p.id = newTodo.id;
     
     const span = document.createElement("span");
     span.innerText = newTodo.text;
@@ -30,9 +30,9 @@ function paintToDo(newTodo){
     button.innerText="X";
     button.addEventListener("click",deleteToDo);
     
-    li.appendChild(span);
-    li.appendChild(button);
-    toDoList.appendChild(li);
+    p.appendChild(span);
+    p.appendChild(button);
+    toDoList.appendChild(p);
 }
 
 function saveToDos(){
@@ -40,10 +40,10 @@ function saveToDos(){
 }
 
 function deleteToDo(event){
-    const li = event.target.parentElement; // event.target["parentElement"]도 가능
-    li.remove();
+    const p = event.target.parentElement; // event.target["parentElement"]도 가능
+    p.remove();
 
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(p.id));
     // filter -> array에 요소 하나씩 꺼내어 ( )안에 각각 적용한다.
     // toDo로 요소하나를 받고, => 오른쪽으로 연산을 하며 true면 새로운 array에 포함,
     // false면 새로운 array에서 제외한다.
